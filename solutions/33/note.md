@@ -1,0 +1,4 @@
+- divide the taks into two steps 
+- step 1, check if the target is in the range where all elements are ascending 
+- step 2, if yes, search for target using normal binary search in the proper range; if no, then change the range to the other range 
+- at every step 1, we only know one range (left or right of mid) is a proper range 

@@ -1,0 +1,4 @@
+- the solution is similar to 33, need to check if the middle value equals to left value and right value  
+- if equal, then increment left index, to skip this value 
+- repeat until `mid > left` or `mid < right`, then we found the proper range where all elements are increasing 
+- do normal binary search in the proper range 

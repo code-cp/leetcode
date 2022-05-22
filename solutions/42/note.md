@@ -1,0 +1,1 @@
+- ref [this link](https://riptutorial.com/cplusplus/example/1672/sharing-ownership--std--shared-ptr-) for how to use shared pointer with array, and ref to [this issue](https://www.codeproject.com/Questions/1268688/Problem-compiling-shared-ptr-with-arrays-cplusplus) 

@@ -1,0 +1,3 @@
+- similar to `786. K-th Smallest Prime Fraction` 
+- https://medium.com/@d_dchris/largest-palindrome-product-problem-brilliant-approach-using-mathematics-python3-leetcode-479-b3f2dd91b1aa
+- https://leetcode-cn.com/problems/largest-palindrome-product/solution/bao-li-po-jie-chao-shi-jian-zhi-by-andre-a2av/

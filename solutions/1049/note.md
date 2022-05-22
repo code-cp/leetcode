@@ -1,0 +1,2 @@
+- [video](https://youtu.be/xCbYmUPvc2Q)
+- [discussion](https://stackoverflow.com/a/17246722/8519188), [discussion](https://www.acwing.com/file_system/file/content/whole/index/content/364689/)

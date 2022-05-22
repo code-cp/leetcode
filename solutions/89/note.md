@@ -1,0 +1,3 @@
+- [discussion](https://leetcode-cn.com/problems/gray-code/solution/c5xing-dai-ma-xiang-xi-jie-xi-dui-xin-sh-xrkw/)
+- [discussion](https://leetcode.com/problems/gray-code/discuss/29882/What-if-I-have-no-knowledge-over-Gray-Code-before)
+- [dp](https://leetcode-cn.com/problems/gray-code/solution/zhu-bu-tui-jin-de-dong-tai-gui-hua-jie-fa-by-kpcod/)

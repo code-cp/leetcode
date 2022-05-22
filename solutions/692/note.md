@@ -1,0 +1,3 @@
+- solution [ref](https://leetcode-cn.com/problems/top-k-frequent-words/solution/c-dui-pai-xu-vs-kuai-su-xuan-ze-by-qiank-pe90/)
+- time complexity `O(mlogk)`, where m is the number of words in pq 
+- [notes](https://stackoverflow.com/questions/9958180/advantages-of-setting-priority-queue-container) on container in pq 
