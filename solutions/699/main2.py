@@ -33,7 +33,7 @@ class ChthollyTree:
         if len(self.nodes) == 0: 
             tr = TreeNode(l, r, v) 
             self.nodes.append(tr)
-            return 0 
+            return 
         itr = self.split(r+1)
         itl = self.split(l) 
         del self.nodes[itl:itr]
