@@ -1,4 +1,3 @@
-from bz2 import compress
 from typing import * 
 
 class SegmentTree(): 
