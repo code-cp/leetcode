@@ -1,3 +1,4 @@
+use std::collections::HashSet;
 impl Solution {
     pub fn backtrack(matchsticks: &Vec<i32>, target: i32, sides: &mut Vec<i32>, i: usize) -> bool {
         // base case 
@@ -6,10 +7,12 @@ impl Solution {
         }
 
         // recursive case 
+        let mut visited = HashSet::new();
         for j in 0..4 {
-            if j > 0 && sides[j - 1] == sides[j] {
+            if visited.contains(&sides[j]) {
                 continue;
             }
+            visited.insert(sides[j]);
             if sides[j] + matchsticks[i] <= target {
                 sides[j] += matchsticks[i];
                 if Solution::backtrack(&matchsticks, target, sides, i + 1) {
