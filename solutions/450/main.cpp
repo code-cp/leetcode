@@ -35,8 +35,7 @@ public:
         // key is not found 
         if (root == nullptr) return root; 
         if (root->val == key) {
-            // both left, right are empty, return null 
-            // left is empty, right is not, return right 
+            // left is empty, return right 
             if (root->left == nullptr) return root->right; 
             // right is null, left is not, return left 
             else if (root->right == nullptr) return root->left; 
