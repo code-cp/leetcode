@@ -12,8 +12,9 @@ class Solution:
                 # 如果r = mid - 1后导致r<l，说明l等于mid
                 r = mid - 1 
             elif calTime(piles, h, mid) > h:
-                # 注意返回l不是l-1
+                # 当calTime(piles, h, mid) > h，mid已经不符合条件，返回l = mid + 1 
                 l = mid + 1 
+        # 注意返回l不是l-1
         return l  
 
 if __name__ == "__main__": 
