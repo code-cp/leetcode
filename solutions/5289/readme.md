@@ -1,0 +1,3 @@
+- same with 1723. Find Minimum Time to Finish All Jobs
+- ref https://youtu.be/vT1nhRyFfNo
+- also similar to https://github.com/code-cp/leetcode/blob/main/solutions/1994/main.py
