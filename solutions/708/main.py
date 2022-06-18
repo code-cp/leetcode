@@ -27,24 +27,28 @@ class Solution:
             return head 
         res = head 
         insert = Node(insertVal)
-        # if insert is larger than max or smaller than min 
+        # if insert is not within (min, max)
         min_node = head 
         max_node = head 
         while head: 
             head = head.next
             if res == head: 
                 break 
-            if head.val <= min_node.val: 
+            if head.val < min_node.val: 
                 min_node = head 
-            if head.val >= max_node.val: 
+            if head.val > max_node.val: 
                 max_node = head 
         if min_node.val >= insertVal or max_node.val <= insertVal: 
-            temp = max_node.next 
+            head = max_node
+            temp = head.next 
+            while temp.val == max_node.val and temp != head: 
+                max_node = temp 
+                temp = temp.next 
             head = max_node
             head.next = insert  
             insert.next = temp
             return res 
-        # if insert is within [min, max]
+        # if insert is within (min, max)
         head = min_node 
         while head: 
             if head.val > insertVal: 
