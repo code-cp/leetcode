@@ -1,6 +1,8 @@
 from typing import * 
 
 # 一个较长的字符串肯定不会是一个较短字符串的子序列，那么只需要从长到短判断，每一个字符串是否为其他长度不小于它的字符串的子序列就行了
+# When we add a letter Y to our candidate longest uncommon subsequence answer of X, it only makes it strictly harder to find a common subsequence. 
+# Thus our candidate longest uncommon subsequences will be chosen from the group of words itself.
 class Solution:
     def findLUSlength(self, strs: List[str]) -> int:
         def isSubSeq(w1, w2): 
