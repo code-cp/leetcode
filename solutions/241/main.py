@@ -37,7 +37,7 @@ class Solution:
             res = []
             for i in range(l, r, 2):
                 left = dfs(l, i)
-                right = dfs(i + 2, r)
+                right = dfs(i+2, r)
                 for x in left:
                     for y in right:
                         res.append(operator(x, expr[i+1], y))
