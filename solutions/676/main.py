@@ -22,7 +22,7 @@ class MagicDictionary:
             node.is_end = True 
 
     def search(self, searchWord: str) -> bool:
-        def dfs(node, word):
+        def compare(node, word):
             for ch in word:
                 if ch not in node.children:
                     return False 
@@ -34,7 +34,7 @@ class MagicDictionary:
         for i, ch in enumerate(searchWord):
             # check if can skip node.children
             for _, n in node.children.items():
-                if dfs(n, searchWord[i+1:]):
+                if compare(n, searchWord[i+1:]):
                     if ch != n.char:
                         return True   
             # if cannot skip, then ch must in node.children
