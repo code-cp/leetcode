@@ -11,6 +11,7 @@ class WordFilter:
     # Take "apple" as an example, we will 
     # insert add "apple{apple", "pple{apple", "ple{apple", "le{apple", "e{apple", "{apple" 
     # into the Trie Tree.
+    # NOTE, cannot simply use "appleapple", "ppleapple", etc
     def __init__(self, words: List[str]):
         idx_dict = {}
         for w in words:
