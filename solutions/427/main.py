@@ -37,8 +37,8 @@ class Solution:
                 return False 
             if node.topLeft.isLeaf == 0 or node.topRight.isLeaf == 0 or node.bottomLeft.isLeaf == 0 or node.bottomRight.isLeaf == 0:
                 return False 
-            if node.topLeft.val == node.topRight.val == node.bottomLeft.val == node.bottomRight.val:
-                return True 
+            return node.topLeft.val == node.topRight.val == node.bottomLeft.val == node.bottomRight.val
+                
 
         n = len(grid)
         root = Node(1, 0, None, None, None, None)
