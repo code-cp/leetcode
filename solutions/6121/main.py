@@ -13,7 +13,7 @@ class Solution:
             new_nums = []
             for n in nums: 
                 n = n[-q[1]:]
-                new_nums.append(n)
+                new_nums.append(int(n))
             sort_num = sortList(new_nums)
             trim_results[q[1]] = sort_num 
             ans.append(sort_num[q[0]-1])
