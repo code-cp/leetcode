@@ -26,6 +26,7 @@ class Solution:
         m, n = len(grid), len(grid[0])
         total = 0 
         while True: 
+            # NOTE, need to initialize visited for every day 
             visited = [[0]*n for _ in range(m)]
             virus_area = []
             all_nexts = []
