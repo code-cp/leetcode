@@ -25,7 +25,7 @@ class Solution:
 
                 if node and start == -1: 
                     start = count 
-                if node:
+                if node: 
                     end = count 
 
                 if node is None: 

@@ -21,7 +21,7 @@ class Solution:
 
                 if node and start == -1: 
                     start = idx 
-                if node:
+                if node: 
                     end = idx 
 
                 if node.left: 
