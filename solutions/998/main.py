@@ -22,6 +22,7 @@ class Solution:
             elif node.right.val < val: 
                 temp = node.right 
                 node.right = tr 
+                # insert to left since all values in right subtree is left to new val
                 tr.left = temp 
                 return root 
             node = node.right
