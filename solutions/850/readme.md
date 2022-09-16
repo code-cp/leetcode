@@ -1,0 +1,2 @@
+- 差分数组 https://youtu.be/f8pRFDWFp54
+- 二维珂朵莉树是否可行？
