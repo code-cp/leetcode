@@ -15,8 +15,6 @@ class Island:
             return 0 
         if grid[i][j] < 1:
             return 0 
-        if grid[i][j] == 0: 
-            return 0 
         grid[i][j] = self.id 
         # dfs 
         count = 1 

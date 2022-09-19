@@ -11,14 +11,16 @@ class Solution:
             return -1 
         if not insert and (server > available_servers[-1] or server < available_servers[0]): 
             server = available_servers[0]
-            # 注意remove的时间复杂度是O(n)
-            available_servers.remove(server)
+            # 注意Yes, it is O(1) to pop the last element of a Python list, 
+            # and O(N) to pop an arbitrary element (since the whole rest of the list has to be shifted). 
+            # So just to make it clear, list. pop(0) is O(n) and list. pop() is O(1).
+            available_servers.pop(0)
             return server 
         left, right = 0, n-1
         while left <= right: 
             mid = left + (right - left) // 2 
             if available_servers[mid] == server: 
-                available_servers.remove(server) 
+                available_servers.pop(mid) 
                 return server 
             elif available_servers[mid] > server: 
                 right = mid - 1
@@ -29,14 +31,14 @@ class Solution:
                 available_servers.insert(mid, server)
             else: 
                 server = available_servers[mid]
-                available_servers.remove(server) 
+                available_servers.pop(mid) 
             return server
         else: 
             if insert: 
                 available_servers.insert(mid+1, server)
             else: 
                 server = available_servers[(mid+1)%n]
-                available_servers.remove(server)
+                available_servers.pop((mid+1)%n)
             return server 
 
     def busiestServers(self, k: int, arrival: List[int], load: List[int]) -> List[int]:
