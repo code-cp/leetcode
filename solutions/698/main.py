@@ -11,7 +11,7 @@ def memoize(function):
       return rv
   return wrapper
 
-# time complexity O(k^n)
+# time complexity O(2^kn)
 class Solution:
     def canPartitionKSubsets(self, nums: List[int], k: int) -> bool:
         total = sum(nums)
@@ -29,10 +29,12 @@ class Solution:
                 return True
             for i in range(n):
                 if nums[i] + cur_sum > target:
+                    # since nums is sorted 
+                    # no need to use larger values 
                     break
                 if used >> i & 1:
                     continue 
-                if backtrack(used | (1 << i), (cur_sum + nums[i]) % target):  # p + nums[i] 等于 per 时置为 0
+                if backtrack(used | (1 << i), (cur_sum + nums[i]) % target):  
                     return True
             return False
 
