@@ -2,11 +2,13 @@ from typing import *
 
 class Solution:
     def minSwap(self, nums1: List[int], nums2: List[int]) -> int:
-        # dp, a, b are positions for last two digits 
-        # case 1: do not swap a, b 
-        # case 2: swap both a, b 
-        # case 3: swap a 
-        # case 4: swap b 
+        # dp, i, j are positions for last two digits 
+        # case 1: do not swap i, j
+        # case 2: swap both i, j
+        # case 3: swap i
+        # case 4: swap j 
+        # keep i means nums1[i], nums2[i] do not swap 
+        # swap i means swap them 
         n = len(nums1)
         keep = [float("inf")] * n 
         swap = [float("inf")] * n 
@@ -26,6 +28,8 @@ class Solution:
                 # swap a 
                 keep[i] = min(keep[i], swap[i-1])
         
+        # use the min of keep and swap
+        # this means we can either keep or swap at this position
         return min(keep[-1], swap[-1])
 
 if __name__ == "__main__": 
