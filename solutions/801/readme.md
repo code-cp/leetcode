@@ -1,1 +1,2 @@
 - 花花酱 https://youtu.be/__yxFFRQAl8
+- similar to 122. Best Time to Buy and Sell Stock II

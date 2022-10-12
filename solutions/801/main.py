@@ -1,5 +1,24 @@
 from typing import * 
 
+# You are given an integer array prices where prices[i] is the price of a given stock on the ith day.
+# On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any time. However, you can buy it then immediately sell it on the same day.
+# Find and return the maximum profit you can achieve.
+
+# 来源：力扣（LeetCode）
+# 链接：https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii
+# 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+# class Solution:
+#     def maxProfit(self, prices: List[int]) -> int:
+#         # dp table
+#         dp = [[0] * 2 for _ in range(len(prices))]
+#         # initialize
+#         dp[0][0] = 0
+#         dp[0][1] = -prices[0]
+#         for i in range(1, len(prices)):
+#             dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
+#             dp[i][1] = max(dp[i-1][1], dp[i-1][0] - prices[i])
+#         return dp[-1][0]
+
 class Solution:
     def minSwap(self, nums1: List[int], nums2: List[int]) -> int:
         # dp, i, j are positions for last two digits 
