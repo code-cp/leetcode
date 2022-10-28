@@ -10,6 +10,8 @@ class Solution:
         stack = deque() 
         stack.append((arr[0], 0))
         for i in range(1, n): 
+            # NOTE, use >= 
+            # stack is from large to small numbers 
             while len(stack) > 0 and arr[i] <= stack[-1][0]:
                 _, j = stack.pop()
                 left_min[i] += j+1  
