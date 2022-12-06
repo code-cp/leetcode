@@ -30,7 +30,7 @@ class Solution:
 
             # plan 2 if ports are same 
             if j+1 <= n and boxes[j][0] == boxes[j+1][0]: 
-                # dp[j'] = min(dp[j'], dp[i-1] + trip_num + 1) 
+                # dp[j'] = min(dp[j'], dp[i-1] + trip_num - 1 + 1) 
                 dp[last_j-1] = min(dp[last_j-1], dp[i-1] + trip_num)
             
             # update interval 
