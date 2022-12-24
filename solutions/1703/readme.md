@@ -1,0 +1,2 @@
+- 【每日一题】1703. Minimum Adjacent Swaps for K Consecutive Ones, 12/27/2020 https://www.youtube.com/watch?v=Il5sSd-AReI&ab_channel=HuifengGuan
+- similar to leetcode 296 

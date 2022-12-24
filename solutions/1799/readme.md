@@ -1,0 +1,4 @@
+- 花花酱 LeetCode 1799. Maximize Score After N Operations - 刷题找工作 EP390 https://youtu.be/M-rv0PV_NnE
+- 【每日一题】1799. Maximize Score After N Operations, 3/26/2021 https://youtu.be/IZN7Qqi85vY
+- LeetCode 1799. Maximize Score After N Operations https://youtu.be/uySUx0FFly0
+- 题解 https://leetcode.cn/problems/maximize-score-after-n-operations/solutions/2028948/rustji-yi-hua-sou-suo-by-coding-cafe-vnwf/
