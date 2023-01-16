@@ -1,5 +1,8 @@
 from typing import * 
 
+# The key is, if there is an array of numbers all with factor F1, and their GCD G1 is larger than F1, 
+# then the GCD of any subsequence of them will be at least G1, F1 will not be reached.
+
 import math 
 class Solution:
     def countDifferentSubsequenceGCDs(self, nums: List[int]) -> int:
