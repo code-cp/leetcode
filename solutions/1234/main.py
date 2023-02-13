@@ -22,6 +22,7 @@ class Solution:
 
         i = j = 0 
         res = float("inf")
+        # NOTE avoid infinite loop 
         while i < n and j < n: 
             while j < n and max(outside) > n//4: 
                 outside[letter_to_idx[s[j]]] -= 1
@@ -29,6 +30,7 @@ class Solution:
             while i < j and max(outside) <= n//4: 
                 outside[letter_to_idx[s[i]]] += 1
                 i += 1 
+            # NOTE use j-i+1
             res = min(res, j-i+1)
         
         return res  

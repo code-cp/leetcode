@@ -21,11 +21,6 @@ class Solution:
 if __name__ == "__main__": 
     sol = Solution() 
 
-    s = "WWQQRRRRQRQQ"
-    assert sol.balancedString(s) == 4 
-
-    # s = "QWER"
-    # assert sol.balancedString(s) == 0
-
-    # s = "QQWE"
-    # assert sol.balancedString(s) == 1 
+    s = "QQWE"
+    # 1211
+    assert sol.balancedString(s) == 1 
