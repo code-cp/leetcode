@@ -1,0 +1,1 @@
+- 【每日一题】1250. Check If It Is a Good Array, 11/25/2019 https://www.youtube.com/live/rdANceLkEXo?feature=share
