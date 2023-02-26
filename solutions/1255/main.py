@@ -1,5 +1,9 @@
 from typing import * 
 from collections import Counter
+
+# takeaway: 
+# how to use bit manipulation to iterate all subsets 
+
 class Solution:
     def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
         res = 0 
