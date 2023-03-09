@@ -1,0 +1,2 @@
+- https://leetcode.cn/problems/brace-expansion-ii/solutions/2152366/python3javacgotypescript-yi-ti-yi-jie-di-gs64/
+- 【每日一题】1096. Brace Expansion II, 6/2/2020 https://www.youtube.com/live/K5nbi0CECjA?feature=share
