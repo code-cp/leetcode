@@ -1,5 +1,9 @@
 from typing import * 
 
+# key takeaway:
+# how to handle index when using prefix 
+# need to use i+1 instead of i 
+
 class Solution:
     def countSubarrays(self, nums: List[int], k: int) -> int:
         for i, n in enumerate(nums): 
@@ -15,7 +19,8 @@ class Solution:
         # subarray sum -> prefix sum 
         n = len(nums)
         prefix = [0] * (n+1) 
-        # how many prefix whose sum == s and len is even  
+        # how many prefix whose sum == s and len is even
+        # NOTE, remember to initialize prefix_even
         prefix_even = {0: 1}
         # how many prefix whose sum == s and len is odd  
         prefix_odd = {}
