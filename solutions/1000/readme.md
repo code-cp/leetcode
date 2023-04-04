@@ -1,0 +1,3 @@
+- 【每日一题】1000. Minimum Cost to Merge Stones, 04/07/2019 https://www.youtube.com/watch?v=S1IUYAtgzus&ab_channel=HuifengGuan
+- 花花酱 LeetCode 1000. Minimum Cost to Merge Stones - 刷题找工作 EP245 https://www.youtube.com/watch?v=FabkoUzs64o&ab_channel=HuaHua
+   - https://zxi.mytechroad.com/blog/dynamic-programming/leetcode-1000-minimum-cost-to-merge-stones/
