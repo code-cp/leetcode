@@ -1,0 +1,1 @@
+- 【每日一题】1392. Longest Happy Prefix, 2/2/2021 https://www.youtube.com/watch?v=n4an59As73Y&ab_channel=HuifengGuan

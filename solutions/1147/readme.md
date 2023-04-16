@@ -1,0 +1,1 @@
+- related https://leetcode.cn/problems/longest-happy-prefix/description/
