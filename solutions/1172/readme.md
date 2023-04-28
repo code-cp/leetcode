@@ -1,0 +1,3 @@
+- 【每日一题】1172. Dinner Plate Stacks, 09/28/2019 https://www.youtube.com/watch?v=5OzyykyZfIw&ab_channel=HuifengGuan
+- 花花酱 LeetCode 1172. Dinner Plate Stacks - 刷题找工作 EP266 https://www.youtube.com/watch?v=DUsOp0HMQQg&ab_channel=HuaHua
+- https://leetcode.cn/problems/dinner-plate-stacks/solutions/2248707/yu-qi-wei-hu-di-yi-ge-wei-man-zhan-bu-ru-sphs/
