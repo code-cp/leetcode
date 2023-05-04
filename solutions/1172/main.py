@@ -1,40 +1,42 @@
-from collections import defaultdict 
+from sortedcontainers import SortedSet
 class DinnerPlates:
 
     def __init__(self, capacity: int):
-        self.left_not_full = 0
-        self.right_not_empty = -1 
         self.capacity = capacity
-        self.plates = defaultdict(list)
+        self.stacks = []
+        self.not_full = SortedSet()
 
     def push(self, val: int) -> None:
-        self.plates[self.left_not_full].append(val)
-        while len(self.plates[self.left_not_full]) == self.capacity:
-            self.left_not_full += 1 
-
-        if len(self.plates[self.left_not_full]) != 0: 
-            self.right_not_empty = max(self.right_not_empty, self.left_not_full)
-        else: 
-            self.right_not_empty = max(self.right_not_empty, self.left_not_full-1)
-            
+        if len(self.not_full) == 0: 
+            # all full, create a new set 
+            self.stacks.append([val])    
+            if self.capacity > 1: 
+                self.not_full.add(len(self.stacks)-1)  
+        else:
+            # select the left most stack 
+            idx = self.not_full[0]      
+            self.stacks[idx].append(val)
+            if len(self.stacks[idx]) == self.capacity: 
+                self.not_full.discard(idx)
     
     def pop(self) -> int:
-        if self.right_not_empty == -1: 
-            return -1 
-        return self.popAtStack(self.right_not_empty)
+        idx = len(self.stacks)-1
+        return self.popAtStack(idx)
     
     def popAtStack(self, index: int) -> int:
-        if len(self.plates[index]) == 0: 
+        if index < 0 or index >= len(self.stacks) or len(self.stacks[index]) == 0: 
+            # cannot pop 
             return -1 
-    
-        val = self.plates[index].pop()
-        if index == self.right_not_empty and len(self.plates[index]) == 0: 
-            while len(self.plates[self.right_not_empty]) == 0 and self.right_not_empty >= 0: 
-                self.right_not_empty -= 1 
-    
-        self.left_not_full = min(self.left_not_full, index)
-    
-        return val 
+        
+        val = self.stacks[index].pop()
+        if index == len(self.stacks)-1 and len(self.stacks[-1]) == 0: 
+            while len(self.stacks) > 0 and len(self.stacks[-1]) == 0: 
+                self.not_full.discard(len(self.stacks)-1)
+                self.stacks.pop()
+        else: 
+            self.not_full.add(index)
+            
+        return val  
 
 if __name__ == "__main__": 
     s = DinnerPlates(1)
