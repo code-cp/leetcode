@@ -1,0 +1,2 @@
+- 【每日一题】1483. Kth Ancestor of a Tree Node, 7/16/2020 https://www.youtube.com/watch?v=XMM-lG6JqSY&ab_channel=HuifengGuan
+- 花花酱 LeetCode 1483. Kth Ancestor of a Tree Node - 刷题找工作 EP336 https://www.youtube.com/watch?v=Vvk4xjLfk84&ab_channel=HuaHua
