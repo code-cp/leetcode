@@ -20,11 +20,13 @@ class Solution:
                 cost_subset[i][state] = total 
         
         for i in range(1,m+1): 
-            for state in range(1<<n): 
+            for state in range(1<<n):
+                # case 1, [0,i-1] and i choose different nodes in B   
                 subset = state 
                 while subset > 0:
                     dp[i][state] = min(dp[i][state], dp[i-1][state-subset] + cost_subset[i][subset])
                     subset = (subset-1)&state 
+                # case 2, i choose a node in B that is already chosen by [0,i-1]
                 # ref https://www.youtube.com/live/vVOOh0VGiMk?feature=share&t=1282
                 mi = float("inf")
                 for j in range(n):
