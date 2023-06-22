@@ -16,10 +16,11 @@ class Solution:
                 return False 
             return True 
         
-        def countFlip(i, j, blacks): 
+        def countFlip(i, j): 
             nonlocal m 
             nonlocal n 
             nonlocal chessboard
+            nonlocal blacks 
             
             # count all whites 
             whites = {}
@@ -38,7 +39,7 @@ class Solution:
 
             # check whites surrounded by blacks 
             cnt = 0 
-            new_blacks = []
+            new_blacks = set()
             for k, v in whites.items(): 
                 if len(v) == 0: 
                     continue 
@@ -51,8 +52,10 @@ class Solution:
                 cnt += len(v)
                 for (vi,vj) in v: 
                     # mark new whites as black 
+                    # NOTE, this will affect the later iterations 
                     blacks[vi][vj] = 1 
-                    new_blacks.append((vi,vj))
+                    # print(f"countFlip {vi} {vj}")
+                    new_blacks.add((vi,vj))
 
             return cnt, new_blacks 
         
@@ -69,14 +72,19 @@ class Solution:
                 blacks[i][j] = 1 
                 all_changed = set()
                 total = 0 
-                cnt, new_blacks = countFlip(i, j, blacks)
+                cnt, new_blacks = countFlip(i, j)
                 total += cnt 
                 while len(new_blacks) > 0:
                     for (ni,nj) in new_blacks: 
+                        # NOTE, this line is useless 
+                        # blacks[ni][nj] = 1
+                        # print(f"while {ni} {nj}")
                         all_changed.add((ni,nj))
                     cur_changed = set()
                     for (ni,nj) in new_blacks:
-                        cnt, nb = countFlip(ni,nj,blacks)
+                        # NOTE, need to set black in countFlip
+                        # otherwise it will double count here 
+                        cnt, nb = countFlip(ni,nj)
                         total += cnt 
                         for (ni,nj) in nb: 
                             cur_changed.add((ni,nj))
@@ -91,8 +99,9 @@ class Solution:
     
 if __name__ == "__main__": 
     s = Solution() 
-    
-    assert s.flipChess([".X.",".O.","XO."]) == 2
-    assert s.flipChess(["....X.","....X.","XOOO..","......","......"]) == 3
+
+    assert s.flipChess(["......","......","XOOO..","..OOOX","...XX.","......","......"]) == 6    
+    # assert s.flipChess([".X.",".O.","XO."]) == 2
+    # assert s.flipChess(["....X.","....X.","XOOO..","......","......"]) == 3
     # place at center to get max. whites 
-    assert s.flipChess([".O.....",".O.....","XOO.OOX",".OO.OO.",".XO.OX.","..X.X.."]) == 10
+    # assert s.flipChess([".O.....",".O.....","XOO.OOX",".OO.OO.",".XO.OX.","..X.X.."]) == 10
