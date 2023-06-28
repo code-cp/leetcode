@@ -1,0 +1,1 @@
+- 【每日一题】1681. Minimum Incompatibility, 12/7/2020 https://www.youtube.com/watch?v=i2w1z7cQPoA&ab_channel=HuifengGuan
