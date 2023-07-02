@@ -37,6 +37,7 @@ class Solution:
             else: 
                 last = -1 
                 # find next element for current subset 
+                # NOTE, only need to consider the next element in for loop 
                 for i in range(cur_idx+1, n): 
                     if visited[i] == 1: 
                         continue 
