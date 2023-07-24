@@ -1,0 +1,2 @@
+- https://leetcode.ca/all/1279.html
+- https://leetcode.ca/2019-06-01-1279-Traffic-Light-Controlled-Intersection/
