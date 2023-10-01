@@ -1,0 +1,3 @@
+- https://www.youtube.com/watch?v=EpLALCho36w&ab_channel=HuifengGuan
+- https://www.youtube.com/watch?v=MCTN3MM8vHA&t=231s&ab_channel=HuaHua
+- related to leetcode 432
