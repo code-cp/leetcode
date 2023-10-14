@@ -1,0 +1,2 @@
+- https://www.youtube.com/watch?v=8sxeQyumrYc&ab_channel=HuaHua
+- 并查集 https://leetcode.cn/problems/avoid-flood-in-the-city/solutions/301115/gong-xian-yi-ge-bing-cha-ji-jin-si-onde-si-lu-by-n/
