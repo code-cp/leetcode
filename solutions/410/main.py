@@ -19,7 +19,7 @@ class Solution:
         
         # i is group  
         for i in range(2, k+1):
-            # j is index, need to at least i-1
+            # j is index, need to start at least i-1
             # since we need i groups 
             # eg, i = 2, j = 1, then groups are [0], [1] 
             for j in range(i-1, n):
